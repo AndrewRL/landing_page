@@ -1,0 +1,107 @@
+body, html {
+    height: 100%;
+}
+
+.normal-text {
+    color: #333741;
+}
+
+.bg-image {
+    background-image: url("yellow-to-red-trianglify.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-color {
+    background: #D75749;
+}
+
+.structure {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 50px;
+    grid-gap: 20px;
+}
+
+.panel {
+    background: #f1ead1;
+    border-radius: 5px;
+}
+
+.splash {
+    grid-column: 1 / -1;
+    grid-row: span 5;
+}
+
+.signup {
+    grid-column: 3 / 11;
+    display: grid;
+    grid-template-columns: auto 1fr 1fr 1fr auto;
+    justify-items: center;
+    align-items: center;
+}
+
+.signup-text-field {
+    margin: 10px;
+}
+
+.signup-item {
+    width: 100%;
+    height: 100%;
+}
+
+.signup-field {
+    margin-top: 8px;
+    margin-left: 8px;
+    border: 2px solid black;
+    border-radius: 3px;
+    width: 90%;
+    height: 60%;
+    font-size: large;
+
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid #DDDDDD;
+}
+
+.signup-field:focus {
+  box-shadow: 0 0 5px #f8bf39;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #f8bf39;
+}
+
+.signup-submit-btn {
+    border-radius: 3px;
+    margin: 8px;
+    margin-right: 10px;
+    height: 35px;
+}
+
+.small-info {
+    grid-column: span 3;
+    grid-row: 7 / span 3;
+}
+
+.med-info{
+    grid-column: span 6;
+    grid-row: span 3;
+}
+
+.big-info {
+    grid-column: span 12;
+    grid-row: span 3;
+}
+
+.buffer {
+    grid-column: span 12;
+    grid-row: span 2;
+}
