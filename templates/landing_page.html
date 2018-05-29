@@ -3,27 +3,16 @@
 {% block content %}
 <div class="bg-image normal-text">
     <div class="structure">
-        <div class="logo">
-            <img class="splash-logo" src="static/logo.png">
-        </div>
-        <div class="banner">Introducing Otto.</div>
-        <div class="tag-line">A collaborative, automated scheduling solution
+        <img class="splash-logo" src="static/logo.png">
+        <div class="banner">
+            <div class="banner-text">Introducing Otto.</div>
+            <div class="banner-tag-line">Collaborative, automated scheduling software
             for small and medium-size businesses.
+            </div>
         </div>
-        <div class="splash-text p-left">We recognize that as an employer, your scheduling needs may vary week-to-week,
-            month-to-month, and even season-to-season. That's why we allow <i>you</i> to create templates
-            outlining <i>your</i> preferences for each scenario.
-        </div>
-        <div class="splash-text center">Once you have outlined your preferences in a template, give your employees a chance to select their
-            preferred shift times.
-        </div>
-        <div class="splash-text p-right">At the click of a button, your template and your employees preferences are turned into a schedule! Want
-            to schedule three weeks in advance? No problem! Just select your preferred template and we will create and
-            send out a schedule on the day of your choosing.
-        </div>
-        <div class="arrow">
-            <img class="arrow-img" src="static/arrow-right.png">
-        </div>
+        <div class="splash-text p-left">Lay out schedules quickly using powerful shift templating tools.</div>
+        <div class="splash-text center">Allow employees to enter their preferences and availability for every shift.</div>
+        <div class="splash-text p-right">Automatically create schedules you and your team will love in a single click.</div>
 
         <div class="small-arrow-one">
             <img class="small-arrow-one-img" src="static/arrow-right.png">
@@ -32,7 +21,17 @@
         <div class="small-arrow-two">
             <img class="small-arrow-two-img" src="static/alt_arrow_right.png">
         </div>
-
+        <div class="signup-form">
+            <div class="signup-left-spacer"></div>
+            <div class="signup-text">
+                <h4 class="signup-text-field normal-text">Interested? Let us know!</h4>
+            </div>
+            <input class="signup-field signup-first" placeholder="First Name">
+            <input class="signup-field signup-last" placeholder="Last Name">
+            <input class="signup-field signup-email" placeholder="Email">
+            <button id="signup-submit-btn" type="button" class="signup-submit-btn">&raquo;</button>
+            <div class="signup-right-spacer"></div>
+        </div>
         <div class="laptop-screen"></div>
 
     </div>
