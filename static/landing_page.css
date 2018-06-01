@@ -72,11 +72,8 @@ body, html {
 }
 
 .bg-color {
-    background: #234f85;
+    background: #333741;
     height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .bg-color-two {
@@ -378,7 +375,7 @@ body, html {
     border: 2px solid #f8bf39;
     border-radius: 5px;
     grid-column: span 3;
-    grid-row: 4 / 8;
+    grid-row: span 4;
     font-size: 15px;
     font-weight: 450;
     font-family: "Arial", sans-serif;
@@ -406,13 +403,13 @@ body, html {
 .icon {
     z-index: 10;
     grid-column: span 3;
-    grid-row: 3 / 4;
+    grid-row: 2 / 3;
     padding-left: 100px;
     padding-top: 10px;
 }
 
 .icon-img {
-    max-width: 70%;
+    max-width: 50%;
 }
 
 .med-info p {
