@@ -17,30 +17,42 @@ window.onload = function() {
             method: "POST",
             body: JSON.stringify(data),
         }).then(response => response.json())
-        .then(jsonData =>
-            swal({
-              title: `Thanks!`,
-              html: `
-              <hr>
-              <div class="contact-modal-text">
-                Choose from the options below to get updates about Mosaic.
-              </div>
-              <div class="contact-modal-options">
-                <input type="checkbox" id="contact-modal-notify"> Notify me when Mosaic is available to the public!</input><br>
-                <input type="checkbox" id="contact-modal-updates"> Send me regular updates about Mosaic. (1 per month or fewer)</input><br>
-                <input type="checkbox" id="contact-modal-beta"> Please contact me about trying a beta version of Mosaic.<br>(permanent discount applies)</input><br>
-              </div>
-              <div class="contact-modal-unsub-notice">You can unsubscribe from our update emails any time.</div>
-              `,
-              type: 'success',
-              confirmButtonColor: '#3085d6',
-              confirmButtonText: 'Continue'
-            }).then((result) => {
-              if (result.value) {
-                post_contact_preferences()
-              }
-            })
-        ).catch(err => {
+        .then((json_data) => {
+
+            if (json_data['success'] == false){
+                swal({
+                  title: `Whoops!`,
+                  text: "It looks like this email address is already registered. Check your email to see if you've" +
+                   "received anything from us in the past or try another email address.",
+                  type: 'warning',
+                  confirmButtonColor: '#3085d6',
+                  confirmButtonText: 'Continue'
+                })
+            } else {
+                swal({
+                  title: `Thanks!`,
+                  html: `
+                  <hr>
+                  <div class="contact-modal-text">
+                    Choose from the options below to get updates about Mosaic.
+                  </div>
+                  <div class="contact-modal-options">
+                    <input type="checkbox" id="contact-modal-notify"> Notify me when Mosaic is available to the public!</input><br>
+                    <input type="checkbox" id="contact-modal-updates"> Send me regular updates about Mosaic. (1 per month or fewer)</input><br>
+                    <input type="checkbox" id="contact-modal-beta"> Please contact me about trying a beta version of Mosaic.<br>(permanent discount applies)</input><br>
+                  </div>
+                  <div class="contact-modal-unsub-notice">You can unsubscribe from our update emails any time.</div>
+                  `,
+                  type: 'success',
+                  confirmButtonColor: '#3085d6',
+                  confirmButtonText: 'Continue'
+                }).then((result) => {
+                  if (result.value) {
+                    post_contact_preferences()
+                  }
+                });
+            }
+        }).catch(err => {
             console.log("Signup form data could not be posted to the server.")
         });
     };
