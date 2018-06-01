@@ -71,11 +71,13 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 100%;
 }
 
 .bg-color {
-    background: #333741;
-    height: 100%;
+    background: linear-gradient(to bottom, #333741 75%, rgba(255,0,0,0));
 }
 
 .bg-color-two {
@@ -90,13 +92,14 @@ body, html {
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: 50px;
+    grid-template-rows: repeat(7, 1fr);
     grid-gap: 20px;
 }
 
 .secondary-structure {
     padding-left: 100px;
     padding-right: 100px;
+    padding-bottom: 150px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-auto-rows: 50px;
@@ -363,7 +366,7 @@ body, html {
 .signup-field:focus {
   box-shadow: 0 0 5px #f8bf39;
   padding: 3px 0px 3px 3px;
-  margin: 5px 1px 3px 0px;
+      margin: 5px 1px 3px 0px;
   border: 1px solid #f8bf39;
 }
 
@@ -459,4 +462,79 @@ body, html {
 
 .contact-modal-options > input {
     padding: 10px;
+}
+
+.cascade {
+    padding-top: 75px;
+    padding-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-row-gap: 90px;
+}
+
+.cascade-row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto 1fr;
+    grid-column: 3 / 11;
+    grid-row: span 4;
+}
+
+.cascade-text {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto 1fr;
+    grid-column: span 6;
+}
+
+.cascade-text-icon {
+    grid-column: 1/-1;
+    grid-row: 1 / 2;
+
+    width: 90px;
+    height: 90px;
+}
+
+.cascade-icon-img {
+    max-width: 100%;
+}
+
+.cascade-text-heading {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+
+    font-size: 30px;
+    font-weight: 200;
+    font-family: "Arial", sans-serif;
+}
+
+.cascade-text-body {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    padding: 15px;
+    padding-left: 0px;
+
+    color: #939393;
+    font-weight: 200;
+    font-size: 20px;
+    font-family: "Arial", sans-serif;
+}
+
+.cascade-img {
+    grid-column: span 6;
+    display:grid;
+}
+
+.cascade-big-img-right {
+    max-width: 65%;
+    border-radius: 30px;
+    justify-self: flex-end;
+    padding-right: 30px;
+}
+
+.cascade-big-img-left {
+    max-width: 65%;
+    border-radius: 30px;
+    justify-self: flex-start;
+    padding-left: 30px;
 }
