@@ -32,11 +32,20 @@ body, html {
 }
 
 .yellow {
-    color: #F8bF39;
+    color: #F8bF39 !important;
 }
 
 .dark-blue {
     color: #333741;
+}
+
+.text-outline {
+  color: white;
+  text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
 }
 
 .bold {
@@ -57,12 +66,15 @@ body, html {
 }
 
 .opaque {
-    grid-column: 1 / 8;
-    grid-row: 1 / 8;
-    background: #ddd;
-    opacity: 0.7;
+    grid-column: 2 / 8;
+    grid-row: 3 / 7;
+    background: #000;
+    opacity: 0.8;
     border-radius: 3px;
     z-index: 1;
+    margin-right: -20px;
+    margin-bottom: -15px;
+    margin-left: 5px;
 }
 
 .blurred-background {
@@ -72,15 +84,16 @@ body, html {
     width: 100%;
     height: 100%;
     background-image: url('storefront_orig.jpg');
-    background-size: 178%;
+    background-size: 100%;
     background-position: 3%;
 }
 
 .mask {
-    grid-column: 1 / 8;
+    grid-column: 1 / 13;
     grid-row: 1 / 8;
     z-index: 0;
     opacity: 0.7;
+    margin: -20px;
 }
 
 .bg-image {
@@ -100,7 +113,7 @@ body, html {
 
 .bg-color-two {
     background: #f6f6f4;
-    height: 40%;
+    height: 32%;
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -139,7 +152,7 @@ body, html {
 }
 
 .banner-text {
-    grid-column: 1 / 8;
+    grid-column: 2 / 8;
     grid-row: 1 / 3;
     font-size: 60px;
     font-weight: 550;
@@ -147,6 +160,7 @@ body, html {
     align-self: center;
     justify-self: center;
     z-index: 2;
+    padding-left: 50px;
 }
 
 .banner-tag-line {
@@ -300,24 +314,20 @@ body, html {
 }
 
 .bullet-points {
-    grid-column: 2 / 5;
+    grid-column: 2 / 6;
     grid-row: 3 / 7;
     z-index: 2;
     font-size: 20px;
     align-self: center;
+    margin-left: 20px;
 }
 
 .features-list {
-    list-style: none;
+    list-style-image: url("star.png");
 }
 
 .feature-item {
-    text-indent: -.7em;
-}
-
-.feature-item:before {
-    content: "•  ";
-    color: #f8bf39; /* or whatever color you prefer */
+    padding-top: 10px;
 }
 
 .form-opaque {
@@ -330,7 +340,7 @@ body, html {
 }
 
 .signup-form {
-    grid-column: 5 / 7;
+    grid-column: 6 / 8;
     grid-row: 3 / 7;
     display: grid;
     justify-items: center;
