@@ -85,7 +85,7 @@ body, html {
 
 .bg-image {
     background-image: url("storefront_orig.jpg");
-    height: 60%;
+    height: 68%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -589,4 +589,79 @@ body, html {
 
 .bg-cascade {
     background: #eaf7ff;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-gap: 30px;
+}
+
+.bg-about {
+    background: #4d8cf2;
+}
+
+.about-header {
+    grid-column: 2 / span 10;
+    justify-self: center;
+    font-size: 35px;
+    font-weight: 200;
+    font-family: "Arial", sans-serif;
+    margin-top: 30px;
+}
+
+.about-mosaic {
+    grid-column: 2 / span 10;
+    justify-self: center;
+    font-size: 20px;
+    font-weight: 200;
+    font-family: "Arial", sans-serif;
+    text-align: center;
+}
+
+.about-staff {
+    grid-column: 2 / span 10;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.about-staff-entry {
+    display: grid;
+    grid-template-rows: 256px auto auto 1fr;
+    grid-column-gap: 15px;
+    background: #fff;
+    border-radius: 3px;
+}
+
+.about-staff-entry-img {
+    grid-row: 1 / -1;
+    align-self: center;
+}
+
+.about-staff-entry-name {
+    font-size: 20px;
+    font-weight: 200;
+    font-family: "Arial", sans-serif;
+    color: #000;
+}
+
+.about-staff-entry-title {
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 200;
+    font-family: "Arial", sans-serif;
+    color: #fff;
+}
+
+.about-headshot {
+    max-width: 256px;
+    border-radius: 2px;
+    justify-self: center;
+}
+
+.footer{
+    height: 150px;
+    background: green;
 }
