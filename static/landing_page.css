@@ -816,3 +816,28 @@ body, html {
 .social-media-icons img {
     max-width: 10%;
 }
+
+.outer {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.left {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    background: #ddd;
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    grid-column: 2 / 18;
+}
+
+.right {
+    grid-column: 18 / 19;
+    grid-row: 1 / -1;
+    height: 100%;
+    width: 100%;
+}
