@@ -35,6 +35,10 @@ body, html {
     color: #F8bF39 !important;
 }
 
+.tan {
+    color: #F1ead1;
+}
+
 .dark-blue {
     color: #333741;
 }
@@ -108,7 +112,7 @@ body, html {
 }
 
 .bg-color {
-    background: #fff;
+    background: #f1ead1;
 }
 
 .bg-color-two {
@@ -128,14 +132,34 @@ body, html {
 }
 
 .secondary-structure {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
     padding-bottom: 75px;
     padding-top: 45px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: 50px;
-    grid-gap: 20px;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 15px;
+}
+
+.bold-tag-line {
+    color: #d75749;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Arial", sans-serif;
+    grid-column: 1 / -1;
+    grid-row: 1 / 4;
+    margin-top: 30px;
+}
+
+.learn-more-chevron {
+    color: #333741;
+    font-size: 15px;
+    font-family: "Arial", sans-serif;
+    grid-column: 1 / -1;
+    justify-self: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
 }
 
 .panel {
@@ -443,53 +467,35 @@ body, html {
 
 .med-info{
     position: relative;
-    border: 2px solid #d75749;
-    grid-column: span 3;
-    grid-row: span 4;
+    grid-column: span 6;
+    grid-row: span 3;
     font-size: 15px;
     font-weight: 450;
     font-family: "Arial", sans-serif;
-    color: #939393;
+    color: #333741;
     padding: 20px;
     align-self: top;
     justify-self: center;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-}
-
-.med-info:before {
-    background: none;
-    border: 4px solid #f8bf39;
-    content: "";
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    right: 4px;
-    bottom: 4px;
+    grid-template-columns: 64px 1fr;
 }
 
 .icon {
-    z-index: 10;
-    grid-column: span 3;
-    grid-row: 1 / 2;
-    padding-left: 100px;
-    padding-top: 10px;
+    align-self: center;
+    margin-right: 10px;
 }
-
 .icon-img {
-    max-width: 50%;
+    max-width: 100%;
 }
 
 .med-info p {
     margin: 0 !important;
-    grid-column: span 3;
-    grid-row: 2 / 4;
     align-self: flex-start;
-    justify-self: center;
-    text-align: center;
-    padding-left: 5px;
+    justify-self: flex-start;
+    text-align: left;
+    padding-left: 20px;
     padding-right: 5px;
+    border-left: 2px solid #d75749;
 }
 
 .big-info {
@@ -507,8 +513,8 @@ body, html {
     grid-row: 1 / 2;
     font-size: 20px;
     align-self: center;
-    justify-self: center;
-    color: #000;
+    justify-self: flex-start;
+    color: #d75749;
 }
 
 .contact-modal-options {
@@ -517,6 +523,52 @@ body, html {
 
 .contact-modal-options > input {
     padding: 10px;
+}
+
+.review-block {
+    background: #d75749;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding-left: 200px;
+    padding-right: 200px;
+    grid-gap: 30px;
+}
+
+.user-review {
+    grid-column: span 6;
+    grid-row: 1 / -1;
+    display: grid;
+    grid-template-rows: 50px auto auto auto 50px;
+    justify-items: center;
+}
+
+.review-spacer {
+    grid-column: 1 / -1;
+}
+
+.review-text {
+    font-size: 25px;
+    font-weight: 400;
+    font-family: "Arial", sans-serif;
+    align-self: flex-start;
+    color: #f1ead1;
+    text-align: center;
+}
+
+.review-name {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Arial", sans-serif;
+    align-self: flex-end;
+    color: #333741;
+}
+
+.review-source {
+    font-size: 14px;
+    font-weight: 200;
+    font-family: "Arial", sans-serif;
+    color:#333741;
 }
 
 .cascade {
@@ -557,7 +609,7 @@ body, html {
 .cascade-text-heading {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
-
+    color: #d75749;
     font-size: 30px;
     font-weight: 200;
     font-family: "Arial", sans-serif;
@@ -569,7 +621,7 @@ body, html {
     padding: 15px;
     padding-left: 0px;
 
-    color: #939393;
+    color: #333741;
     font-weight: 200;
     font-size: 20px;
     font-family: "Arial", sans-serif;
@@ -597,7 +649,7 @@ body, html {
 }
 
 .bg-cascade {
-    background: #eaf7ff;
+    background: #f1ead1;
 }
 
 .skyline {
@@ -613,10 +665,12 @@ body, html {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto auto;
     grid-gap: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .bg-about {
-    background: #fff;
+    background: #f1ead1;
 }
 
 .about-header {
@@ -625,7 +679,6 @@ body, html {
     font-size: 35px;
     font-weight: 200;
     font-family: "Arial", sans-serif;
-    margin-top: 30px;
 }
 
 .about-us {
@@ -658,7 +711,7 @@ body, html {
     font-family: "Verdana", sans-serif;
     text-align: left;
     margin-bottom: 20px;
-    color: #939393;
+    color: #333741;
 }
 
 .about-us-mission {
@@ -677,7 +730,7 @@ body, html {
     font-family: "Verdana", sans-serif;
     text-align: left;
     margin-bottom: 20px;
-    color: #333741;
+    color: #d75749;
     margin-top: 10px;
     align-self: flex-end;
 }
@@ -687,7 +740,7 @@ body, html {
     font-size: 15px;
     font-family: "Verdana", sans-serif;
     text-align: left;
-    color: #00a7bc;
+    color: #333741;
     align-self: flex-end;
 }
 
@@ -707,7 +760,7 @@ body, html {
     font-family: "Verdana", sans-serif;
     text-align: left;
     margin-bottom: 20px;
-    color: #333741;
+    color: #d75749;
     margin-top: 10px;
     align-self: flex-start;
 }
@@ -717,7 +770,7 @@ body, html {
     font-size: 15px;
     font-family: "Verdana", sans-serif;
     text-align: left;
-    color: #00a7bc;
+    color: #333741;
     align-self: flex-start;
 }
 
